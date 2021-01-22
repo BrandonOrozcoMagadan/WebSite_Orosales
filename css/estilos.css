@@ -1,0 +1,372 @@
+* {                     /* HACE QUE LOS ESPACIOS DEL MARGEN DE IZQ,DER,ARR,ABJ SE PEGUEN  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {                  /* FUENTE OPEN SANS PARA EL TEXTO */
+    font-family: 'open sans';
+}
+
+.contenedor {           /* ESTILO DE LA CLASE "CONTENEDOR" */
+    padding: 60px 0;    /* PADDING ES PARA DEJAR ESPACIOS ENTRE SECCIONES */
+    width: 90%;         /* ANCHO Y MAX ANCHO EN PX */
+    max-width: 1000px;
+    margin: auto;       /* CENTRA TODO */
+    overflow: hidden;   /* SI ALGO SE SALE DEL CONTENEDOR, SE ESCONDE */
+}
+
+.titulo {               /* ESTILO DE LA CLASE "TITULO" */
+    color: #642a73;     /* LOS CODIGOS DE COLORES USADOS EN CSS SON TOMADOS DE: "https://htmlcolorcodes.com/" */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 600px;
+    background: #c31432;
+    /* fallback for old browsers */         /* ESTAS ESPECIFICACIONES DEL GRADIENTE DEL HEADER SON TOMADAS DE "https://uigradients.com/" */
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/header.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/header.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{                            /* ESTILOS PARA EL TABLERO DE NAVEGACIÓN "NAV" */
+    text-align: right;
+    padding: 30px 50px 0 0;     /* POSICIONAMIENTO DEL TABLERO NAV */
+}
+
+nav > a{
+    color:#fff;                 /* COLOR BLANCO */
+    font-weight: 300;           /* FONT MÁS LIGERA  */
+    text-decoration: none;      /* QUITA SUBRAYADO */
+    margin-right: 10px;         /* SEPARA UNO DE OTRO */
+}
+
+nav > a:hover{
+    text-decoration: underline; /* CUANDO SE PASA EL PUNTERO EN EL NAV, SE PONE "UNDERLINE" */
+}
+
+header .textos-header{
+    display: flex;              /* FLEX ES UN CONTENEDOR LLAMADO "FLEXBOX" PERTENECIENTE A HTML5 QUE NOS PERMITE "MAQUETAR" DE MANERA MÁS SENCILLA LOS CONTENEDORES */
+    height: 430px;
+    width: 100%;
+    align-items: center;        
+    justify-content: center;    /* TEXTO CENTRADO Y JUSTIFICADO ENMEDIO */
+    flex-direction: column;     /* SE PONE UN TEXTO DEBAJO DEL OTRO */
+    text-align: center;         /* ALINEACIÓN DEL TEXTO */
+}
+
+.textos-header H1{              /* ESTILOS PARA ETIQUETAS H1 */
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header H2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+/* SOBRE NOSOTROS */
+
+
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{         /* PARA EL CONTENEDOR SOBRE NOSOTROS */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{                   /* TAMAÑO DE LA IMAGEN ABOUT US */
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{  /* SEPARACIÓN DE LA IMAGEN REFERIDA AL TEXTO DEL CONTENEDOR */
+    width: 48%;
+}
+
+.contenido-textos h3{               /* ESTILOS PARA LA ETIQUETA H3 EN LA CLASE CONTENIDO TEXTOS */
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{          /* ASIGNACIÓN DE ESTILOS PARA EL "SPAN" (1), (2) -- QUE RESULTAN EN LA ESFERA PURPURA CON NUMEROS EN BLANCO*/
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{            /* SE LE ASIGNA UN PADDING PARA SEPARAR LOS PARRAFOS DEL SPAN UNO DE OTRO */
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.contenido-textos2 h3{            
+    padding: 20px 100px 30px 15px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.contenedor-sobre-nosotros2{         
+    padding: 20px 100px 30px 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido-textos2 h3 span{          /* ASIGNACIÓN DE ESTILOS PARA EL "SPAN" (1), (2) -- QUE RESULTAN EN LA ESFERA PURPURA CON NUMEROS EN BLANCO*/
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+a{
+    color:#fff;                 /* COLOR BLANCO */
+}
+
+/* RECETARIO */
+.portafolio{
+    background: #f2f2f2;        /* LE ASIGNA UN BACKGROUND NO BLANCO, SINO GRIS CLARO */
+}
+
+.galeria-port{                  /* PARA LA GALERIA DEL RECETRIO LE ASIGNAMOS CONTENEDOR FLEX */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;            /* SEPARA LAS IMAGENES DE LA GALERIA UNA DE OTRA */
+}
+
+.imagen-port{                   
+    width: 24%;                 /* SE REDUCE EN UN 24% PARA PODER VER LAS IMAGENES MÁS PEQUEÑAS */
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;            
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);    
+}
+
+.imagen-port > img{         /* ESTO NOS PERMITE QUE LAS IMAGENES SE VEAN EN UN BLOQUE QUE CONTIENE CADA IMAGEN AL 24% */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{                 /* ESTILOS CSS UNA VEZ SE SITUE EL MOUSE ENCIMA DE LAS IMAGENES */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{      /* PERMITE QUE NO APAREZCA EL COLOR DEL BACKGROUND DE LA IMAGEN HASTA QUE SE SITUE EL CURSOR SOBRE EL */
+    transform: scale(1);
+}
+
+
+/* NUESTROS CHEFS */
+.cards{
+    display: flex;                      
+    justify-content: space-evenly;
+}
+
+.cards .card{                           /* CONTENEDORES FLEX DE CLASE "CARD" */
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+
+/*  NUESTROS SERVICIOS */
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+.servicio-cont{                     /*  CONTENEDORES FLEX PARA EL CONTENIDO DE LA CLASE SERVICIO-CONT */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 90%;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+/* PIE DE PAGINA */
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+/*FORMUARIO*/
+
+.form-register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+
+}
+
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register botons{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.titulo2 {               
+    color: #642a73;
+    padding: 0px;     
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: -50px;
+}
